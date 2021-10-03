@@ -17,7 +17,7 @@ class Account(ZenObject):
                  instrument:               int = None,  # -> Instrument.id
                  company:                  int = None,  # -> Company.id
                  type:                     str,  # See check in body
-                 # balance:                Double?
+                 balance:                  float,
                  # startBalance:           Double?
                  # creditLimit:            Double? >= 0
                  inBalance:                bool,
@@ -44,6 +44,7 @@ class Account(ZenObject):
         if type not in valid_type:
             raise(ValueError('"type" should be in {}'.format(valid_type)))
         self.type = type
+        self.balance = balance
         self.inBalance = inBalance
         self.enableCorrection = enableCorrection
         self.enableSMS = enableSMS
