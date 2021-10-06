@@ -14,7 +14,7 @@ class Tag(ZenObject):
                  changed:        int = timestamp(),
                  user:           UUID,  # User.id
                  title:          str,
-                 # parent:       String? -> Tag.id
+                 parent:         str,
                  # icon:         String?
                  # picture:      String?
                  # * color = (a << 24) + (r << 16) + (g << 8) + (b << 0)
